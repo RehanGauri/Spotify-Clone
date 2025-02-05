@@ -88,8 +88,8 @@ async function displayAlbums(){
     for (let index = 0; index < array.length; index++) {
     const e = array[index];
     
-    // if(e.href.includes("/songs/") && !e.href.includes(".htaccess")){
-        if(e.href.includes("/songs/")){
+    if(e.href.includes("/songs/") && !e.href.includes(".htaccess")){
+        // if(e.href.includes("/songs/")){
 
             // let folder = e.href.split("/").slice(-2)[0]
             let folder = new URL(e.href).pathname.split("/").filter(Boolean).pop();
@@ -221,38 +221,5 @@ playMusic(songs[0], true)
         }
     })
 }
-
-
-// ScrollingText
-function initScrollingText() {
-    const songInfo = document.querySelector(".songinfo");
-
-    // 🎵 Yahan dynamic text set karein
-    let songText = "Ye ek lamba song title hai jo scroll karega...";
-
-    // 🔥 Agar already text exist kare to remove karo (taake duplicate na ho)
-    songInfo.innerHTML = "";
-
-    // 🎯 Naya span element create karo
-    const textElement = document.createElement("span");
-    textElement.classList.add("scrolling-text");
-    textElement.textContent = songText;
-    songInfo.appendChild(textElement); // Song info ke andar add karo
-
-    function updateScrolling() {
-        if (textElement.scrollWidth > 300) {
-            textElement.style.animation = "scrollText 5s linear infinite";
-        } else {
-            textElement.style.animation = "none";
-        }
-    }
-
-    updateScrolling(); // Page load hone par check karo
-    window.addEventListener("resize", updateScrolling); // Resize hone par bhi check karo
-}
-
-// ✅ Ye function tabhi chalega jab page load ho chuka ho
-document.addEventListener("DOMContentLoaded", initScrollingText);
-
 
 main()
