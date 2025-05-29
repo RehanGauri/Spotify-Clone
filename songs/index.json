@@ -1,7 +1,22 @@
 [
-    "Brazilian Phonk",
-    "cs",
-    "kuchbhi",
-    "Naat Sharif",
-    "ncs"
+  {
+    "playlist": "Brazilian Phonk",
+    "songs": ["Ariis-FUNK DO BOUNCE.mp3", "BRAZILIAN DANÇA.mp3"]
+  },
+  {
+    "playlist": "cs",
+    "songs": ["aaj-ki-raat.mp3"]
+  },
+  {
+    "playlist": "kuchbhi",
+    "songs": ["millionaire.mp3"]
+  },
+  {
+    "playlist": "Naat Sharif",
+    "songs": ["Hara Gumbad Jo Dekhoge.mp3"]
+  },
+  {
+    "playlist": "ncs",
+    "songs": ["millionaire.mp3", "taambdi-chaamdi.mp3"]
+  }
 ]
